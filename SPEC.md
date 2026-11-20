@@ -1,4 +1,4 @@
-# Design handoff spec · v2
+# Design handoff spec · Address Entry and Rider View · v2
 
 **Figma file:** Screens: see the published link (HTML, not Figma)
 **Final page:** Screens: see the published link (HTML, not Figma)
@@ -7,40 +7,42 @@
 
 | # | Screen | Language | Frame name | Priority |
 | --- | --- | --- | --- | --- |
-| 1 | Customer Address Entry | English | customer_entry.html | must |
-| 2 | Rider Order View | Korean | rider_view.html | must |
+| 1 | Address entry | English | address.html | must |
+| 2 | Rider order detail | Korean | rider.html | must |
 
 ## English input → Korean display
 
 | Customer enters (English screen) | Field name (Data Guide) | Rider sees (Korean screen) | Notes |
 | --- | --- | --- | --- |
-| Delivery Address | road_address_en | road_address_ko | Main address block |
-| Detail Address | building_name_en | building_name_ko | Secondary building line |
-| Delivery Note | delivery_note | delivery_note | Customer requests card |
+| Street address search | road_address_en | road_address_ko | Translated road address shown prominently |
+| Building name | building_name_en | building_name_ko | Korean building name display |
+| Detail address (e.g. Room 101) | detail_address | 동/호수 정보 | Key location detail |
+| Delivery notes | delivery_note | 배달 요청사항 | Displayed in Korean for rider clarity |
 
 ## States per screen
 
 | Screen | Default | Empty | Error | Other (loading, no results) |
 | --- | --- | --- | --- | --- |
-| Customer Entry | Address and note filled | Blank inputs with placeholder | Invalid address inline error | Address searching indicator |
-| Rider Order View | Korean address and note card | Missing address fallback text | Failed to load order details | Loading order details |
+| address.html | Address fields filled with initial values | Clean inputs with placeholder text | Red highlight on invalid address field | Address search loading indicator |
+| rider.html | Translated Korean address and delivery notes | Message showing no active delivery order | Network error state message | Loading order data |
 
 ## Specs
 
 - **Spacing:** use the value from the design guide
-- **Colors:** use the value from the design guide
+- **Colors:** use the value from the design guide for text, background, primary, error
 - **Type:** use the value from the design guide
-- **Components:** Text input, text area, button, order card (states: default, focused, error, disabled)
+- **Components:** Text inputs (default, focused, error), Primary action button, Information cards
 - Mobile frame size: 390 × 844
 
 ## Assets
 
-- Export CSS and inline SVG icons
+- Export: Inline SVG icons and shared CSS tokens
+- Where: Relative CSS file (styles.css)
 
 ## Open decisions
 
-- None
+- [none]
 
 ## Changes since the last version
 
-- Realigned scope from animal designs to customer address entry and rider order view screens per developer feedback.
+- Updated design spec and HTML screens to focus strictly on English customer entry and Korean rider view flows.
