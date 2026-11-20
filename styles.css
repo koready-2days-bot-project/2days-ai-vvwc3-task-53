@@ -1,17 +1,120 @@
 :root {
-  --primary-color: #008080;
-  --bg-color: #f4f4f9;
-  --text-color: #333333;
-  --error-color: #d9534f;
-  --border-radius: 8px;
+  --color-primary: #0080FF;
+  --color-background: #F5F7FA;
+  --color-surface: #FFFFFF;
+  --color-text-main: #111111;
+  --color-text-muted: #666666;
+  --color-error: #E53E3E;
+  --color-border: #E2E8F0;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --radius-md: 8px;
+  --font-family: sans-serif;
 }
-body { font-family: sans-serif; background: var(--bg-color); color: var(--text-color); margin: 20px; }
-.phone-frame { width: 390px; height: 844px; border: 2px solid #ccc; border-radius: 20px; background: #fff; padding: 16px; box-sizing: border-box; overflow-y: auto; display: inline-block; vertical-align: top; margin-right: 16px; }
-.header { font-weight: bold; font-size: 20px; margin-bottom: 16px; }
-.state-label { font-weight: bold; margin-bottom: 8px; font-size: 14px; color: #666; }
-.input-group { margin-bottom: 12px; }
-.input-group label { display: block; font-size: 12px; margin-bottom: 4px; }
-.input-group input, .input-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-.input-group.error input { border-color: var(--error-color); }
-.btn { background: var(--primary-color); color: #fff; border: none; padding: 12px; width: 100%; border-radius: var(--border-radius); font-weight: bold; cursor: pointer; }
-.card { background: #f0f0f0; padding: 12px; border-radius: 6px; margin-bottom: 12px; }
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.states-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.state-column {
+  flex: 0 0 390px;
+}
+
+.state-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.phone-frame {
+  width: 390px;
+  height: 844px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-content {
+  padding: var(--spacing-md);
+  flex: 1;
+  display: flex;
+  flex-direction: flex-col;
+  gap: var(--spacing-md);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+.input-field.error {
+  border-color: var(--color-error);
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: 12px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card {
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+}
