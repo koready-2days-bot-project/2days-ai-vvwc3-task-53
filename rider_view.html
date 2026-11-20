@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Rider Order View Screen</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <h1>Rider Order View Screen (Korean)</h1>
+  <div style="display:flex; gap:16px;">
+    <div>
+      <div class="state-label">Default State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo 라이더</div>
+        <div class="card">
+          <strong>배달 주소</strong>
+          <p>서울특별시 마포구 동교로51길 10</p>
+          <p>한빛마을2단지아파트 101동 202호</p>
+        </div>
+        <div class="card">
+          <strong>고객 요청사항</strong>
+          <p>문 앞에 두고 벨을 눌러주세요.</p>
+        </div>
+        <button class="btn">배달 완료</button>
+      </div>
+    </div>
+    <div>
+      <div class="state-label">Empty State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo 라이더</div>
+        <div class="card">
+          <strong>배달 주소</strong>
+          <p>주소 정보가 없습니다.</p>
+        </div>
+        <div class="card">
+          <strong>고객 요청사항</strong>
+          <p>요청사항 없음</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="state-label">Error State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo 라이더</div>
+        <div class="card" style="border: 1px solid var(--error-color);">
+          <strong>오류</strong>
+          <p style="color:var(--error-color);">주소 정보를 불러올 수 없습니다. 다시 시도해 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
