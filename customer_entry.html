@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Customer Entry Screen</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <h1>Customer Entry Screen (English)</h1>
+  <div style="display:flex; gap:16px;">
+    <div>
+      <div class="state-label">Default State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo</div>
+        <div class="input-group">
+          <label>Delivery Address</label>
+          <input type="text" value="10, Donggyo-ro 51-gil, Mapo-gu, Seoul">
+        </div>
+        <div class="input-group">
+          <label>Building / Detail Address</label>
+          <input type="text" value="Hanbit Village Complex 2 Apt. 101-202">
+        </div>
+        <div class="input-group">
+          <label>Delivery Note for Rider</label>
+          <textarea>Please leave at the door and ring the bell.</textarea>
+        </div>
+        <button class="btn">Save Address</button>
+      </div>
+    </div>
+    <div>
+      <div class="state-label">Empty State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo</div>
+        <div class="input-group">
+          <label>Delivery Address</label>
+          <input type="text" placeholder="Enter street address">
+        </div>
+        <div class="input-group">
+          <label>Building / Detail Address</label>
+          <input type="text" placeholder="Apartment, suite, unit">
+        </div>
+        <div class="input-group">
+          <label>Delivery Note for Rider</label>
+          <textarea placeholder="Special instructions for delivery"></textarea>
+        </div>
+        <button class="btn">Save Address</button>
+      </div>
+    </div>
+    <div>
+      <div class="state-label">Error State</div>
+      <div class="phone-frame">
+        <div class="header">Lieferoo</div>
+        <div class="input-group error">
+          <label>Delivery Address</label>
+          <input type="text" value="Invalid address">
+          <span style="color:var(--error-color); font-size:11px;">Address not found. Please check spelling.</span>
+        </div>
+        <button class="btn">Save Address</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
