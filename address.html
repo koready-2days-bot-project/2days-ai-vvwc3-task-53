@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Address Entry Screen (English)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="index.html">&larr; Back to Cover</a></p>
+    <h1>Address Entry Screen (English)</h1>
+    
+    <div class="states-grid">
+      <!-- Default State -->
+      <div class="state-column">
+        <div class="state-title">Default State</div>
+        <div class="phone-frame">
+          <div class="phone-header">
+            <span class="logo">Lieferoo</span>
+            <span>Delivery Address</span>
+          </div>
+          <div class="phone-content">
+            <div class="input-group">
+              <label>Search Address</label>
+              <input type="text" class="input-field" value="10, Donggyo-ro 51-gil">
+            </div>
+            <div class="input-group">
+              <label>Building & Detail Address</label>
+              <input type="text" class="input-field" value="Room 101">
+            </div>
+            <div class="input-group">
+              <label>Delivery Note for Rider</label>
+              <input type="text" class="input-field" value="Please leave at the door">
+            </div>
+            <button class="btn-primary">Save Address</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div class="state-column">
+        <div class="state-title">Empty State</div>
+        <div class="phone-frame">
+          <div class="phone-header">
+            <span class="logo">Lieferoo</span>
+            <span>Delivery Address</span>
+          </div>
+          <div class="phone-content">
+            <div class="input-group">
+              <label>Search Address</label>
+              <input type="text" class="input-field" placeholder="Enter street address...">
+            </div>
+            <div class="input-group">
+              <label>Building & Detail Address</label>
+              <input type="text" class="input-field" placeholder="Apt, Suite, Room number">
+            </div>
+            <div class="input-group">
+              <label>Delivery Note for Rider</label>
+              <input type="text" class="input-field" placeholder="e.g. Leave at door">
+            </div>
+            <button class="btn-primary">Save Address</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div class="state-column">
+        <div class="state-title">Error State</div>
+        <div class="phone-frame">
+          <div class="phone-header">
+            <span class="logo">Lieferoo</span>
+            <span>Delivery Address</span>
+          </div>
+          <div class="phone-content">
+            <div class="input-group">
+              <label>Search Address</label>
+              <input type="text" class="input-field error" value="Invalid Address">
+              <span class="error-message">Address not found. Please check again.</span>
+            </div>
+            <button class="btn-primary">Save Address</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
